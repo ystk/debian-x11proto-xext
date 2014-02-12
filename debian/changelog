@@ -1,3 +1,73 @@
+x11proto-xext (7.2.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Don't require (fake)root for debian/rules clean.
+  * Set docdir in configure directly.
+  * Bump build-deps on xutils-dev, xmlto and xorg-sgml-doctools per
+    configure.ac.
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 15 Apr 2012 19:44:59 +0200
+
+x11proto-xext (7.2.0-3) unstable; urgency=low
+
+  * Mark x11proto-xext-dev Multi-Arch: foreign
+  * Install .pc file to /usr/share/pkgconfig insetad of
+    /usr/lib/pkgconfig
+  * drop dependency on libxau-dev, not needed at all by the proto
+    headers; depend on x11proto-core-dev instead, which may have been the
+    original intent.
+
+ -- Steve Langasek <vorlon@debian.org>  Fri, 17 Jun 2011 09:08:06 -0700
+
+x11proto-xext (7.2.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Julien Cristau <jcristau@debian.org>  Thu, 28 Apr 2011 13:40:53 +0200
+
+x11proto-xext (7.2.0-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 27 Feb 2011 12:03:52 +0100
+
+x11proto-xext (7.1.99.0-1) experimental; urgency=low
+
+  [ Christopher James Halse Rogers ]
+  * New upstream snapshot.
+  * Drop *.css from .install file.  The CSS files are now shipped only once
+    in xorg-sgml-doctools rather than duplicated for each doc.
+
+  [ Julien Cristau ]
+  * Remove Andres Salomon and David Nusinow from Uploaders.  Thanks for your
+    work!
+  * Bump Standards-Version to 3.9.1.
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 14 Feb 2011 16:55:37 +0100
+
+x11proto-xext (7.1.2-1) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
+    good reason.  Thanks, Colin Watson!
+  * Remove myself from Uploaders
+
+  [ Robert Hooker ]
+  * New upstream release.
+  * Bump xutils-dev build dep for util-macros 1.10 requirement.
+
+  [ Cyril Brulebois ]
+  * Add pkg-config build-dep.
+  * Add xmlto, xorg-sgml-doctools, and w3m build-dep for the specs.
+  * Pass --with-xmlto and --without-fop, we want html and txt only.
+  * Kill *.xml in the doc directory, no point in shipping them.
+  * Ship *.html, *.css, and *.txt from the doc directory.
+  * Switch from --list-missing to --fail-missing for additional safety.
+  * No longer pass --disable-shared, this option is gone.
+  * Add myself to Uploaders.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 06 Nov 2010 02:12:03 +0100
+
 x11proto-xext (7.1.1-2) unstable; urgency=low
 
   * Upload to unstable.
